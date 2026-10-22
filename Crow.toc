@@ -1,0 +1,16 @@
+## Interface: 120100
+## Title: Crow
+## Notes: A modernized aura monitoring addon. Based on Raven principles.
+## Author: Dorana
+## SavedVariables: CrowDB
+## IconTexture: Interface\AddOns\Crow\Art\crow32
+## Version: 0.9.1
+
+embeds.xml
+Localizations\enUS.lua
+
+AuraContainer.lua
+Crow.xml
+Crow.lua
+Profile.lua
+Options.lua

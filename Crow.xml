@@ -1,0 +1,42 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+    <StatusBar name="CrowAuraBarTemplate" mixin="CrowAuraBarMixin" virtual="true">
+        <Mixins>
+            <Mixin key="CrowAuraBarMixin" source="local"/>
+            <Mixin key="Mixins.CrowAuraBarMixin" source="local"/>
+        </Mixins>
+        <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+        <Layers>
+            <Layer level="BACKGROUND">
+                <Texture parentKey="bg" setAllPoints="true">
+                    <Color r="0" g="0" b="0" a="0.5"/>
+                </Texture>
+            </Layer>
+            <Layer level="OVERLAY">
+                <FontString parentKey="TimeText" inherits="GameFontHighlightSmall" justifyH="RIGHT">
+                    <Anchors>
+                        <Anchor point="RIGHT" relativePoint="RIGHT" x="-4" y="0"/>
+                    </Anchors>
+                </FontString>
+                <FontString parentKey="NameText" inherits="GameFontHighlightSmall" justifyH="LEFT">
+                    <Anchors>
+                        <Anchor point="LEFT" relativePoint="LEFT" x="4" y="0"/>
+                        <Anchor point="RIGHT" relativePoint="RIGHT" x="-40" y="0"/>
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+        <Scripts>
+            <OnLoad method="OnLoad"/>
+            <OnUpdate method="OnUpdate"/>
+        </Scripts>
+    </StatusBar>
+
+    <Button name="CrowAuraButtonTemplate" mixin="CrowAuraButtonMixin" virtual="true">
+        <Size x="40" y="40"/>
+        <Mixins>
+            <Mixin key="CrowAuraButtonMixin" source="local"/>
+            <Mixin key="Mixins.CrowAuraButtonMixin" source="local"/>
+        </Mixins>
+    </Button>
+</Ui>
